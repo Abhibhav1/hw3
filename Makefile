@@ -5,8 +5,11 @@ VALGRIND := valgrind --tool=memcheck --leak-check=yes
 all: llrec-test
 
 #-----------------------------------------------------
-# ADD target(s) to build your llrec-test executable
+exe=llrec-test 
 #-----------------------------------------------------
+llrec-test:$(exe)
+./$(exe) $(llrec-test1.in)
+
 
 
 clean:
